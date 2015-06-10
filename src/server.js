@@ -34,13 +34,13 @@ server.get('*', async (req, res, next) => {
     let uri = req.path;
     let notFound = false;
     let css = [];
-    let data = {description: ''};
+    let data = {description: '', meta: {}};
     let app = <App
       path={req.path}
       context={{
         onInsertCss: value => css.push(value),
         onSetTitle: value => data.title = value,
-        onSetMeta: (key, value) => data[key] = value,
+        onSetMeta: (key, value) => data.meta[key] = value,
         onPageNotFound: () => notFound = true
       }} />;
 

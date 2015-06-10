@@ -8,7 +8,8 @@ import withStyles from '../../decorators/withStyles'; // eslint-disable-line no-
 class LoginPage {
 
   static contextTypes = {
-    onSetTitle: PropTypes.func.isRequired
+    onSetTitle: PropTypes.func.isRequired,
+    onSetMeta: PropTypes.func.isRequired
   };
 
   render() {
